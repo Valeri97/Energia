@@ -1,0 +1,210 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="index.css">
+  <link href="https://cdn.jsdelivr.net/npm/remixicon@2.5.0/fonts/remixicon.css" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@100;300;400;600&display=swap" rel="stylesheet">
+  <title>Energía</title>
+</head>
+<body>
+<!-- Menu principal -->
+  <header>
+    <div >
+      <img src="img/logo.png" alt="Logo">
+    </div>
+    <nav>
+      <ul id="listaMenu">
+        <li><a href="#inicio">INICIO</a></li>
+        <li><a href="#servicios">SERVICIOS</a></li>
+        <li><a href="#contacto">CONTACTO</a></li>
+    </ul>
+    </nav>
+  </header>
+
+<!-- Encabezado principal -->
+  <section id="portada">
+    <div class="presentacion">
+      <h1>EFICIENCIA ENERGÉTICA A TU MEDIDA</h1>
+      <p>te ayudamos a optimizar tu consumo energético con soluciones personalizadas que combinan ahorro, eficiencia y tecnología.</p>
+      <button class="circulo-btn">
+        <span class="flecha">→</span>
+      </button>
+    </div>
+  </section>
+  <main>
+
+<!-- S1. Introduccion -->
+    <section id="introduccion">
+      <h1>Introducción</h1>
+      <div>
+        <h2>¡Bienvenido a e-nergya!</h2>
+        <br>
+        <h2>Paga solamente por lo que consumes</h2>
+        <br>
+        <p>e-nergya es una asesoría energética comprometida con el ahorro y la eficiencia energética. Su
+        objetivo es ayudar a particulares, empresas y organismos públicos a optimizar el consumo
+        energético, reducir costes y fomentar un uso responsable de la energía. </p>
+      </div>
+      
+    </section>
+  <!-- S1. cifras -->
+    <div class="cifras">
+      <p class="titulo">Cifras destacadas</p>
+      <div class="numero">
+        <span class="valor">15,4</span><span class="unidad">GW</span>
+      </div>
+      <p class="textoCifras">Capacidad total - Enero 2024</p>
+    </div>
+
+<!-- S2. Inicio -->
+    <section id="inicio">
+      <h1>Inicio</h1>
+      <div class="textoInicio">
+        <p>Creemos en el poder del ahorro y en el impacto positivo que puede tener en tu vida y en el medio
+          ambiente. Somos una asesoría energética, ofrecemos un servicio personalizado que te brinda
+          orientación y asistencia para tomar decisiones inteligentes en cuanto al consumo y uso de la
+          energía. Trabajamos contigo para encontrar soluciones que se adapten perfectamente a ti.
+        </p>
+      </div>
+
+      <div class="botones">
+        <button class="circulo-btn" onmouseover="MostrarTexto('texto1', true)" onmouseout="MostrarTexto('texto1', false)">
+          <i class="ri-hand-coin-line"></i>
+        </button>
+
+        <button class="circulo-btn" onmouseover="MostrarTexto('texto2', true)" onmouseout="MostrarTexto('texto2', false)">
+          <i class="ri-lightbulb-flash-line"></i>
+        </button>
+
+        <button class="circulo-btn" onmouseover="MostrarTexto('texto3', true)" onmouseout="MostrarTexto('texto3', false)">
+          <i class="ri-customer-service-2-fill"></i>
+        </button>
+      </div>
+      <div>
+        <div id="texto1" class="texto">
+          <h2>Ahorro Energético</h2>
+          <p>Nuestro enfoque está para ayudarte a ahorrar en tus facturas de
+          electricidad y gas, a través de un análisis detallado de tus consumos.</p>
+        </div>
+        <div id="texto2" class="texto">
+          <h2>Eficiencia Energética</h2>
+          <p>Proponemos el máximo provecho de la energía que consumes. Te
+            ofrecemos recomendaciones y soluciones personalizadas para mejorar la eficiencia de tus
+            equipos.</p>
+        </div>
+        <div id="texto3" class="texto">
+          <h2>Asesoramiento Experto</h2>
+          <p>Contamos con un equipo de expertos en energía que te guiarán en
+            todo el proceso. Conocemos las últimas tecnologías y prácticas eficientes y las adaptamos a
+            tus necesidades.</p>
+        </div>
+      </div>
+    </section>
+
+<!-- S3. Servicios -->
+    <section id="servicios">
+      <h1>Servicios</h1>
+      <p class="textoServiciosPuntos">Tramitamos gratis tu alta de suministro eléctrico, cambio de titular o modificación de potencia.</p>
+      <div class="cajaServiciosPuntos">
+        <div class="servicioPuntos">Estudio de ahorro de electricidad</div>
+        <div class="servicioPuntos">Estudios de ahorro de gas</div>
+        <div class="servicioPuntos">Baterías de condensadores</div>
+        <div class="servicioPuntos">Instalaciones Fotovoltaicas</div>
+        <div class="servicioPuntos">Batería virtual</div>
+        <div class="servicioPuntos">Cargadores para vehículo eléctrico</div>
+        <div class="servicioPuntos">Auditoría energética</div>
+      </div>
+      
+      <div class="cajaServiciosTexto">
+        <div class="servicioTexto">
+          <img src="img/servicio_Asesoria.jpg" alt="Asesoria" class="imagenServicio">
+          <h2>ASESORÍA ENERGETICA PARA PYMES Y GRANDES EMPRESAS</h2>
+          <hr class="separador">
+          <p>Las pequeñas y medianas empresas procuran reducir todos sus gastos al mínimo para
+            obtener la mayor rentabilidad en su actividad sin competir con las grandes
+            compañías.</p>
+        </div>
+
+        <div class="servicioTexto">
+          <img src="img/servicio_Consultoria.jpg" alt="Consultoria" class="imagenServicio">
+          <h2>CONSULTORÍA ENERGÉTICA PARA PARTICULARES</h2>
+          <hr class="separador">
+          <p>En e-nergya analizamos cada caso de forma personalizada con el objetivo de ofrecer
+            soluciones energéticas eficaces y adaptadas a las necesidades del cliente.</p>
+        </div>
+
+        <div class="servicioTexto">
+          <img src="img/servicio_Eficiencia.jpg" alt="Eficiencia" class="imagenServicio">
+          <h2>EFICIENCIA ENERGETICA PARA ORGANISMOS PÚBLICOS</h2>
+          <hr class="separador">
+          <p>Las administraciones a la hora de desarrollar sus funciones suelen partir de un
+            presupuesto cerrado y, en muchas ocasiones, reducido, lo que hace que sea
+            complicado encontrar compañías que encajen en ese perfil ahorrador. Desde e-nergya
+            nos comprometemos a encontrar medidas de ahorro energético adaptadas a las
+            posibilidades de las entidades públicas</p>
+        </div>
+      </div>
+    </section>
+
+<!-- S4. Contacto -->
+    <section id="contacto">
+      <div class="contenedorIzq">
+        <h1>Contacto</h1>
+        <div class="contacto_TituloImagen"></div>
+      </div>
+
+      <div class="contenedorFormulario">
+        <form>
+            <label for="nombre">Nombre: <span class="obligatorio">*</span></label>
+            <input type="text" id="nombre" name="nombre" required>
+
+            <label for="nombre">Apellidos: <span class="obligatorio"> *</span></label>
+            <input type="text" id="apellido" name="apellido" required>
+
+            <label for="correo">Correo Electrónico: <span class="obligatorio"> *</span></label>
+            <input type="email" id="correo" name="correo" required>
+
+            <label for="telefono">Teléfono:<span class="obligatorio"> *</span></label>
+            <input type="tel" id="telefono" name="telefono" required>
+
+            <label for="tipoCliente">Tipo de Cliente: <span class="obligatorio"> *</span></label>
+            <select id="tipoCliente" name="tipoCliente" required>
+                <option value="">Seleccione una opción</option>
+                <option value="empresa">Empresa</option>
+                <option value="residencia">Residencia</option>
+                <option value="comunidad">Comunidad de Propietarios</option>
+            </select>
+            
+            <label for="cambioTitular">Cambio de Titular: <span class="obligatorio"> *</span></label>
+            <div class="cambioTitular">  
+              <input type="radio" id="cambioSi" name="cambioTitular" value="sí"> Sí
+              <br>
+              <input type="radio" id="cambioNo" name="cambioTitular" value="no"> No
+            </div>
+            
+
+            <label for="factura">Subir Factura de Luz: <span class="obligatorio"> *</span></label>
+            <input type="file" id="factura" name="factura">
+
+            <div class="privacidad">
+                <label>
+                    <input type="checkbox" required><span class="obligatorio"> *</span>
+                    Autorizo el tratamiento de mis datos conforme a la <a href="https://severalenergy.es/inicio/inicio/politica-de-privacidad/" target="_blank" class="link">Política de Privacidad de E-POINT, S.L.</a>.
+                </label>
+                <label>
+                    <input type="checkbox">
+                    Autorizo el envío y recepción de comunicaciones comerciales electrónicas.
+                </label>
+            </div>
+
+            <button type="submit">Enviar</button>
+        </form>
+      </div>
+        
+    </section>
+  </main>
+  <script src="index.js"></script>
+</body>
+</html>

@@ -1,0 +1,384 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+  
+body {
+    font-family: 'Open Sans', sans-serif;
+}
+
+html, body {
+    height: 100%;
+    overflow-x: hidden; /* Evita el scroll horizontal */
+}
+
+/*Barra Navegación*/
+header {
+    background-color: #ef2b00;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 30px 30px;
+    position: fixed;
+    width: 100%;
+    z-index: 10;
+    height: 90px;
+}
+
+header img {
+    height: 35px;
+}
+
+#listaMenu {
+    list-style: none;
+    display: flex;
+    gap: 30px;
+}
+
+#listaMenu a{
+    text-decoration: none;
+    color: white;
+    font-weight: bold;
+}
+
+/*Portada */
+#portada{
+    height: 100vh;
+    width: 100%;
+    background-image: url("img/portada.jpg");
+    background-size: cover;
+    background-position: center;
+    position: relative;
+}
+
+    /*Texto */
+.presentacion {
+    position: absolute;
+    top: 40%;
+    left: 5%;
+    text-align: left;
+    color: white;
+}
+
+.presentacion h1 {
+    font-size: 66px;
+    font-weight: bold;
+}
+.presentacion p {
+    font-size: 22px;
+    margin-top: 20px;
+    margin-bottom: 40px;
+}
+
+    /*Boton */
+.circulo-btn{
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2px solid white;
+    background: transparent;
+    color: white;
+    font-size: 2.9rem;
+    line-height: 1;
+    padding: 0;
+    cursor: pointer;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: all 0.3s ease;
+}
+.circulo-btn:hover {
+    transform: scale(1.1);
+}
+.flecha:hover {
+    display: inline-block;
+    animation: moverFlecha 1s ease-in-out forwards;
+}
+
+/* Animación personalizada */
+@keyframes moverFlecha {
+    0% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+    40% {
+      transform: translateX(40px);
+      opacity: 0;
+    }
+    50% {
+      transform: translateX(-40px);
+      opacity: 0;
+    }
+    100% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+}
+
+/*sectiones*/
+main section{
+    padding: 10%;
+    display: flex;
+    min-height: 40vh;
+    justify-content: flex-start;
+}
+main h1 {
+    font-size: 64px;
+    text-transform: uppercase;
+    position: relative;
+    padding-left: 15px;
+}
+main h1::before{
+    content: "";
+    position: absolute;
+    left: 0;
+    top: 10px;
+    width: 3px;                
+    height: 70px;           
+    background-color: rgba(227, 167, 167, 0.508);
+}
+
+main p {
+    font-size: 25px;
+}
+section:nth-of-type(odd) {
+    background-color: white;
+}
+section:nth-of-type(even) {
+    background-color: #ef2b00;
+    color: white;
+}
+
+#introduccion{
+    justify-content: space-between;
+    align-items: center;
+    gap: 160px;
+}
+
+/* S1 - cifras */
+.cifras {
+    margin: 200px 0;
+    text-align: left;
+    position: relative;
+    text-transform: uppercase;
+    left: 10%;
+}
+.titulo {
+    font-size: 14px;
+    top: 0px;
+    position: absolute;
+}
+.valor{
+    font-size: 160px;
+    font-weight: 300;
+}
+.unidad {
+    font-size: 80px;
+    font-weight: 100;
+}
+.textoCifras {
+    font-size: 14px;
+    padding-left: 220px;
+}
+
+/*S2 - Inicio*/
+#inicio {
+    flex-direction: column;
+    background: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), 
+              url('img/imagenPrincipal-inicio.jpg');
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    color: rgb(255, 255, 255);
+}
+.textoInicio {
+    text-align: center;
+    padding: 110px;
+}
+
+.botones {
+    display: flex;
+    justify-content: space-between;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.texto {
+    display: none;
+    margin: 8% 10% 0 10%; /* Top Right Bottom Left */
+    font-size: 25px;
+    text-align: center;
+}
+
+/*S3 - Servicios */
+#servicios {
+    flex-direction: column; 
+}
+
+    /*Servicios - Puntos*/
+.cajaServiciosPuntos {
+    display: flex;
+    flex-wrap: wrap; /* Permite que los elementos pasen a la siguiente línea si no caben */
+    gap: 30px;
+    padding-bottom: 100px;
+    justify-content: center;
+    align-items: center;
+}
+
+.servicioPuntos{
+    background-color: #ef2b00;
+    background: linear-gradient(to bottom, rgb(255, 2, 2), rgb(141, 57, 57));
+    border-radius: 10px;
+    text-align: center;
+    padding: 50px;
+    color: white;
+    margin-bottom: 10px;
+    font-size: 25px;
+    width: 550px;
+}
+.textoServiciosPuntos{
+    text-align: center;
+    font-weight: 800;
+    padding: 50px;
+}
+
+    /*Servicios - Texto*/
+.cajaServiciosTexto{
+    display: flex;
+    gap: 30px;
+    align-items: center;
+
+    /*Sccroll*/
+    overflow-x: auto; /* Muestra la barra solo cuando es necesario */
+}
+        /* Tamaño del scroll */
+.cajaServiciosTexto::-webkit-scrollbar {
+    height: 8px; /* Para el scroll horizontal */
+}
+
+        /* Fondo del scroll */
+.cajaServiciosTexto::-webkit-scrollbar-track {
+    background-color: #ffffff;
+
+}
+
+        /* Control del scroll (thumb) */
+.cajaServiciosTexto::-webkit-scrollbar-thumb {
+    background-color: #ff0000;
+}
+
+.servicioTexto{
+    border: 2px solid #e8e6e6;
+    width: 600px;
+    height: 800px;
+    text-align: center;
+    /* Usando Grid para centrar */
+    display: grid;
+    justify-items: center; /* Centrar horizontalmente */
+    align-content: center; /* Centrar verticalmente, sin estirar */
+    padding: 50px;
+    flex-shrink: 0; /* Evita que se reduzca el tamaño del div */
+    gap: 20px;
+}
+
+.separador{
+    width: 75%; /* Ancho del hr */
+    height: 3px; /* Grosor del hr */
+    background-color: #e8e6e6;
+    margin: 10px auto; /* Centrar horizontalmente */
+    border: none; /* Quitar el borde predeterminado */
+}
+
+.imagenServicio{
+    width: 200px; /* Ajustá el tamaño que quieras */
+    height: 200px; /* Debe ser igual al ancho para que sea circular */
+    border-radius: 50%; /* Hace que sea circular */
+    object-fit: cover; /* Para que la imagen se recorte correctamente dentro del círculo */
+}
+
+/*S4 - Contacto */
+#contacto {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 200px;
+}
+
+/* Contenedor del Formulario */
+.contenedorFormulario {
+    display: flex;
+}
+
+/* Formulario */
+.contenedorFormulario form {
+    background-color: #ffffff;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+    width: 600px;
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+}
+
+/* Etiquetas */
+.contenedorFormulario form label {
+    font-weight: 600;
+    font-size: 15px;
+    color: #000000;
+}
+
+/* Campos de texto y select */
+.contenedorFormulario form input[type="text"],
+.contenedorFormulario form input[type="email"],
+.contenedorFormulario form input[type="tel"],
+.contenedorFormulario form select {
+    padding: 12px;
+    border: 1px solid #dddddd;
+    border-radius: 10px;
+    font-size: 15px;
+    background-color: #f9f9f9;
+    transition: border 0.3s;
+    width: 80%;
+}
+
+.contenedorFormulario form input:focus,
+.contenedorFormulario form select:focus {
+    outline: none;
+    border-color: #ef2b00;
+    background-color: #fef6f5;
+}
+
+/* Privacidad */
+.privacidad {
+    display: flex;
+    flex-direction: column;
+    gap: 8px;
+}
+
+/* Botón de enviar */
+.contenedorFormulario form button {
+    background-color: #ef2b00;
+    color: #fff;
+    font-weight: bold;
+    font-size: 16px;
+    border: none;
+    padding: 12px;
+    border-radius: 15px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+}
+
+.contenedorFormulario form button:hover {
+    background-color: #c22100;
+    transform: scale(1.03);
+}
+
+.obligatorio{
+    color: #c22100;
+}
+.cambioTitular{
+    color: #000000;
+    padding: 5px;
+}
