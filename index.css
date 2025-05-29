@@ -5,52 +5,54 @@
 }
 
 body {
-    font-family: 'Open Sans', sans-serif;
+    font-family: 'Open Sans', Helvetica, Arial, sans-serif;
 }
 
-/*Barra Navegación*/
-header {
-    background-color: #ef2b00;
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    padding: 30px 10%;
-    position: fixed;
-    width: 100%;
-    z-index: 10;
-    height: 70px;
-    font-size: 15px;
-}
+/* Estilos comunes */
+    /* Menu de hamburguesa */
+    #listaMenu {
+        list-style: none;
+        display: flex;
+        gap: 30px;
+    }
 
-.logo {
-    height: 35px;
-}
+    #listaMenu a {
+        text-decoration: none;
+        font-weight: bold;
+    }
 
-/* Menu de hamburguesa */
-#listaMenu {
-    list-style: none;
-    display: flex;
-    gap: 30px;
-}
+    #btnMenu {
+        display: none; /* oculto por defecto */
+        cursor: pointer;
+        background: none;
+        border: none;
+        font-size: 30px;
+        right: 50px;
+        position: absolute;
+        color: #ffffff;
+    }
 
-#listaMenu a {
-    text-decoration: none;
-    color: white;
-    font-weight: bold;
-}
+    header {
+        background-color: #ef2b00;
+        display: flex;
+        padding: 30px 10%;
+        position: relative;
+        width: 100%;
+        z-index: 10;
+        height: 70px;
+        font-size: 15px;
+        justify-content: space-between;
+        align-items: center;
+    }
 
-#btnMenu {
-   /* display: none;  oculto por defecto */
-   cursor: pointer;
-   background: none;
-   border: none;
-   font-size: 30px;
-}
-
+    .logo {
+        height: 45px;
+        padding-top: 10px;
+    }
 
 /*Portada */
 #portada {
-    height: 100vh;
+    height: 95vh;
     width: 100%;
     background-image: url("img/portada.jpg");
     background-size: cover;
@@ -59,17 +61,16 @@ header {
 }
 
 /*Texto */
+.presentacion {
+    position: absolute;
+    top: 10%;
+    text-align: left;
+    color: rgb(255, 255, 255);
+    padding: 8%;
+}
 #introduccion {
     justify-content: space-between;
     gap: 160px;
-}
-
-.presentacion {
-    position: absolute;
-    top: 40%;
-    left: 5%;
-    text-align: left;
-    color: white;
 }
 
 .presentacion h1 {
@@ -79,20 +80,19 @@ header {
 
 .presentacion p {
     font-size: 22px;
-    margin-top: 20px;
-    margin-bottom: 40px;
+    margin-top: 40px;
+    margin-bottom: 60px;
 }
 
 /*Boton */
 .circulo-btn {
-    width: 120px;
-    height: 120px;
+    width: 100px;
+    height: 100px;
     border-radius: 50%;
     border: 2px solid white;
     background: rgba(0, 0, 0, 0.37);
     color: white;
-    font-size: 2.9rem;
-    line-height: 1;
+    font-size: 40px;
     padding: 0;
     cursor: pointer;
     display: flex;
@@ -177,6 +177,7 @@ section:nth-of-type(even) {
     text-align: left;
     position: relative;
     text-transform: uppercase;
+    padding-top: 10px;
 }
 
 .titulo {
@@ -186,19 +187,16 @@ section:nth-of-type(even) {
 }
 
 .valor {
-    font-size: 160px;
+    font-size: clamp(4rem, 10vw, 10rem);
     font-weight: 300;
 }
 
 .unidad {
-    font-size: 80px;
+    font-size: clamp(2rem, 5vw, 6rem);
     font-weight: 100;
+    
 }
 
-.textoCifras {
-    font-size: 14px;
-    padding-left: 220px;
-}
 
 .btn-siguiente {
     border: red;
@@ -244,12 +242,12 @@ section:nth-of-type(even) {
     background-position: center;
     background-repeat: no-repeat;
     color: rgb(255, 255, 255);
-    height: 90vh;
+    height: 100vh;
 }
 
 .textoInicio {
     text-align: center;
-    padding: 50px;
+    padding: 40px;
 }
 
 .botones {
@@ -262,7 +260,7 @@ section:nth-of-type(even) {
 .texto {
     display: none;
     text-align: center;
-    padding: 50px;
+    padding: 40px;
     background-color: #00000085;
     margin-top: 80px;
 }
@@ -503,10 +501,58 @@ footer a {
     gap: 20px;
 }
 
+
+/* Estilos para el escritorio */
+@media (min-width: 1050px) {
+    #listaMenu a {
+        color: white;
+    }
+
+    .textoCifras {
+        font-size: 14px;
+        padding-left: 100px;
+    }
+}
+
 /* Estilos responsive para móviles y tablets */
 @media (max-width: 1050px) {
     /* Header - Menu hamburguesa */
+    #btnMenu {
+        display: block; /* Muestra  el botón */
+        position: absolute;
+        right: 35px; 
+        z-index: 100;
+    }
 
+    #listaMenu {
+        flex-direction: column;
+        padding-left: 50px;
+        gap: 40px;
+        padding-top: 40px;
+    }
+    
+    #listaMenu a {
+        color: rgb(0, 0, 0);
+        font-weight: 600;
+    }
+    
+    #menuPrincipal.active {
+        display: flex;
+    }
+
+    #menuPrincipal {
+        display: none;
+        flex-direction: column;
+        background-color: #ffffffce;
+        position: absolute;
+        top: 70px;
+        right: 0;
+        width: 50%;
+        padding: 20px;
+        height: 100vh;
+        font-size: 30px;
+    }
+    
     /*Introduccion*/
     #introduccion {
         display: flex;
@@ -517,6 +563,10 @@ footer a {
     
     h1 {
         padding-bottom: 50px;
+    }
+
+    .textoCifras {
+        font-size: 14px;
     }
 
     /* Inicio */

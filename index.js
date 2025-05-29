@@ -1,22 +1,14 @@
-        /* Evitar scroll*/
-window.addEventListener('beforeunload', function () {
-    sessionStorage.setItem('scrollPosition', window.scrollY);
-});
-  
-window.addEventListener('load', function () {
-const scrollPosition = sessionStorage.getItem('scrollPosition');
-if (scrollPosition) {
-      window.scrollTo(0, parseInt(scrollPosition, 10));
-    }
-});
+       /* Header */
+function inicializarHeader() {
+  const btnMenu = document.getElementById("btnMenu");
+  const menu = document.getElementById("menuPrincipal");
 
-        /* Header */
-const btnMenu = document.getElementById("btnMenu");
-const menu = document.getElementById("menuPrincipal");
+  btnMenu.addEventListener("click", () => {
+    menu.classList.toggle("active");
+  });
+}
 
-btnMenu.addEventListener("click", () => {
-  menu.classList.toggle("active");
-});
+inicializarHeader();
 
         /* Seccion2 inicio - boton/imagen/texto */
 function MostrarTexto(textoId, mostrar) {
@@ -92,5 +84,4 @@ function cambiarCifra() {
     actualizarCifra(index - 1);
   });
 }
-
 cambiarCifra();
